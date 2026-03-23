@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumier Cosmetología Integral - Montevideo, Uruguay</title>
+    <meta name="description" content="Lumier Cosmetología Integral. Cosmetología, depilación láser y coaching ontológico en el corazón de Montevideo. Te acompañamos a cuidar tu piel de manera consciente.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ======================== NAVBAR ======================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="nav-logo">
+                <img src="img/logo-removebg-preview.png" alt="Lumier Cosmetología Logo">
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ======================== HERO ======================== -->
+    <section class="hero" id="inicio">
+        <div class="hero-content reveal">
+            <span class="hero-badge">Cosmetología · Depilación Láser · Coaching Ontológico</span>
+            <h1>Lumier <span>Cosmetología</span> Integral</h1>
+            <p class="hero-slogan">Te acompaño a cuidar tu piel de manera <em>CONSCIENTE</em>.</p>
+            <a href="#contacto" class="btn-primary">Reservá tu turno</a>
+        </div>
+        <div class="hero-image reveal">
+            <img src="img/imgInicio.png" alt="Lumier Cosmetología Integral">
+        </div>
+    </section>
+
+    <!-- ======================== SERVICIOS ======================== -->
+    <section class="section" id="servicios">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Nuestros Servicios</h2>
+                <p>Cada tratamiento, una experiencia pensada para vos</p>
+            </div>
+            <div class="services-grid">
+
+                <div class="service-card reveal" data-service="cosmetologia">
+                    <div class="service-icon"><i class="fa-solid fa-spa"></i></div>
+                    <h3>Cosmetología Integral</h3>
+                    <p class="service-short">Tratamientos faciales personalizados que nutren, revitalizan y transforman tu piel.</p>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="service-card reveal" data-service="depilacion">
+                    <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Depilación Láser</h3>
+                    <p class="service-short">Tecnología de vanguardia para resultados visibles desde la primera sesión, con cero dolor.</p>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="service-card reveal" data-service="coaching">
+                    <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Coaching Ontológico</h3>
+                    <p class="service-short">Acompañamiento personal para conectar con tu autoestima, seguridad y plenitud interior.</p>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== MODAL SERVICIOS ======================== -->
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modalClose" aria-label="Cerrar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-icon" id="modalIcon"></div>
+            <h3 id="modalTitle"></h3>
+            <p id="modalDesc"></p>
+            <a href="#contacto" class="btn-primary" id="modalCTA">Reservá tu turno</a>
+        </div>
+    </div>
+
+    <!-- ======================== NOSOTROS ======================== -->
+    <section class="section section-alt" id="nosotros">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Lumier Cosmetología</h2>
+                <p>Belleza, bienestar y transformación en un mismo espacio</p>
+            </div>
+
+            <div class="about-content reveal">
+                <div class="about-avatar">
+                    <span class="avatar-initial">L</span>
+                </div>
+                <div class="about-info">
+                    <p class="about-bio">
+                        En Lumier creemos que la verdadera belleza nace de un equilibrio entre el cuidado externo y el bienestar interior. Por eso, unimos la cosmetología integral para nutrir y revitalizar tu piel, la depilación láser para brindarte confianza y libertad en tu imagen, y el Coaching Ontológico, que acompaña tus procesos personales, ayudándote a conectar con tu autoestima, seguridad y plenitud.
+                    </p>
+                    <p class="about-bio about-bio--second">
+                        De esta manera, cada sesión se transforma en una experiencia que va más allá de lo estético: es un espacio de transformación, donde cuidamos tu piel, realzando tu belleza y potenciando tu ser.
+                    </p>
+                </div>
+            </div>
+
+            <!-- GOOGLE RATING -->
+            <div class="google-rating reveal">
+                <div class="rating-badge">
+                    <i class="fa-brands fa-google"></i>
+                    <div class="rating-info">
+                        <div class="rating-stars">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-number">5.0</span>
+                        </div>
+                        <span class="rating-count">+150 opiniones en Google</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RESEÑAS CARRUSEL -->
+            <div class="reviews-section reveal">
+                <h3 class="reviews-title">Lo que dicen nuestras clientas</h3>
+                <div class="carousel">
+                    <button class="carousel-btn" id="prevBtn" aria-label="Anterior">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-track-wrap">
+                        <div class="carousel-track" id="carouselTrack">
+
+                            <div class="review-card active">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">F</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Facu Martinez</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Excelente servicio de depilación láser y cuidado de la piel. La atención es muy profesional y personalizada, brindada por su propia dueña, lo que genera un trato cercano y de mucha confianza. El ambiente es agradable y el servicio impecable. Muy recomendable. ✨"</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">S</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Soña Bentancor</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"En lo personal los resultados de la depilación son realmente maravillosos. Ella es muy atenta, amorosa y amable, sobre todo profesional. Como persona te encariñas mucho, tiene el tiempo para escucharte y las palabras justas en cada momento."</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">D</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Danilo Gonzalez</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Excelente atención y resultados, personal profesional y capacitado a la hora de brindar el servicio. Las sesiones fueron muy cómodas y la piel notó la suavidad al día siguiente. La calidad de los equipos que utilizan es un detalle clave a tener en cuenta."</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">Y</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Yanina Ascarate</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Impecable la atención, con resultados notables desde la primera sesión. Te sentís cómoda en todo momento con tanta amabilidad y profesionalismo. Un lugar hermoso! Super recomendable!!"</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">P</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Paula Fabeiro da Costa</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Soy clienta desde hace muchos años y sin dudas es el mejor lugar para realizarse depilación láser. Los resultados se notan desde las primeras sesiones y realmente es cero dolor. Además, los tratamientos faciales son excelentes. Alaia tiene una energía hermosa, siempre da gusto volver. Súper recomendado."</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">E</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Elizabeth Plata</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Hace un año que estoy en tratamiento, el lugar es precioso y súper higiénico, la atención es excelente. Siempre que voy me siento a gusto. Lo recomiendo."</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">D</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Dayana Pouza</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Excelente atención recibí de las manos de una profesional dedicada, sincera, respetuosa y responsable. Vine por una higiene facial con un masaje y me voy muy satisfecha con el procedimiento. Sin dudas repetiré. Recomendado 100%! A ti que tanto amor le pones a lo que haces, muchos éxitos y mucha luz ✨"</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">P</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Paula Pintos</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Una experiencia increíble. Me hice la depilación definitiva y no puedo estar más contenta. Aia no solo es una excelente profesional, sino que te hace sentir muy cómoda y segura durante todo el proceso."</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">M</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Mercedes</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Me realicé depilación láser y los resultados son realmente visibles desde la primera sesión. El lugar no solo se destaca por los resultados, la prolijidad y el profesionalismo; la atención, amabilidad y calidez de Aiala son lo que verdaderamente hacen de Lumier un lugar único. Sumamente recomendable!"</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">K</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Karen Stephanie Robaina</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"La atención y el tratamiento son buenísimos. En mi caso me estoy haciendo sesiones de depilación láser y desde la primera noto cambios significativos. Recomiendo !!"</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">J</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Janina Gonzalez Domato</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Muy buena atención, el lugar muy limpio y agradable. El tratamiento de depilación excelente, vi cambios desde las primeras sesiones. Lo recomiendo!"</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">A</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Anabella Alvarez</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Muy conforme con todo. Me hice tratamiento facial y ahora comencé depilación. La verdad una divina y profesional total. Muy cálida y tan hermosa persona. Sus sesiones son terapéuticas realmente. Me voy muy tranquila y renovada siempre 🥰"</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">A</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Alejandro Juarez</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Me realicé sesiones de depilación en Lumier y la verdad los resultados son notorios desde la primera sesión. Es un tratamiento que llevó varias sesiones pero valió la pena. Muy recomendado."</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">L</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Laura Gabriela</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Súper recomiendo. Los resultados de la depilación láser fueron evidentes desde el primer encuentro. Resalto, además, la calidez, comodidad y el buen clima que se respira."</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">T</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Tiffy Breso</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"El lugar es súper confortable, desde la primera sesión me sentí muy cómoda. La profesional es super amable y atenta, siempre pendiente de cada detalle. Se nota su dedicación constante. Súper Recomiendo ❤"</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">V</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Verónica Hernández</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Excelente lugar, 100% recomendable. Es el cuarto tratamiento que compro y muy conforme con cualquiera de ellos. Resultados reales, atención muy oportuna, presente en cada detalle."</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">R</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Roma Libert</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Encantada con mi tratamiento, valió mucho la pena. Ella te explica todo, es atenta en cada sesión, alegre y muy profesional. Recomiendo."</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">S</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Shirley Hernandez</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Este centro estético ofrece una experiencia excepcional, el servicio impecable y el ambiente acogedor. Estoy encantada con los prontos resultados de la depilación definitiva."</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">F</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Fede Correa</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Excelente experiencia en Lumier, la atención es de primera y los resultados superaron mis expectativas. El lugar es muy prolijo, moderno y con un ambiente cómodo. 100% recomendable para quienes buscan depilación definitiva con profesionalismo y confianza."</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">L</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Lavinia Titus</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Excelente ambiente, Aiala la chica que atiende es un amor y super profesional, te hace sentir muy cómoda. En cuanto a los resultados, los cambios se ven desde la primera sesión. Sin duda voy a seguir atendiéndome ahí."</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">S</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Sol Peralta Píriz</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Estoy yendo a hacerme depilación láser en Lumier cosmetología integral y sinceramente no podría haber caído en mejores manos. Super atenta y profesional, con un trato amoroso y muy humano que hace toda la diferencia."</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">V</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Valeria Deangelo</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"El mejor lugar para hacerse depilación láser! La atención es excelente y los resultados inmejorables. Altamente recomendable!"</p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-avatar">A</div>
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Alejandro Juarez</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p>"Me realicé la sesión de depilación en Lumier y la verdad los resultados son notorios desde la primer sesión. Es un tratamiento que me llevó sesiones pero valió la pena."</p>
+                            </div>
+
+                        </div><!-- /carousel-track -->
+                    </div><!-- /carousel-track-wrap -->
+                    <button class="carousel-btn" id="nextBtn" aria-label="Siguiente">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div><!-- /carousel -->
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div><!-- /reviews-section -->
+
+        </div>
+    </section>
+
+    <!-- ======================== CONTACTO ======================== -->
+    <section class="section" id="contacto">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Contacto</h2>
+                <p>Estamos en el corazón de Montevideo, esperándote</p>
+            </div>
+
+            <div class="contact-grid reveal">
+
+                <a href="tel:095350595" class="contact-card phone">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="contact-text">
+                        <span class="contact-label">Llamadas</span>
+                        <span class="contact-value">095 350 595</span>
+                    </div>
+                    <span class="contact-btn">Llamar</span>
+                </a>
+
+                <a href="https://wa.me/59895350595" target="_blank" rel="noopener noreferrer" class="contact-card whatsapp">
+                    <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="contact-text">
+                        <span class="contact-label">WhatsApp</span>
+                        <span class="contact-value">095 350 595</span>
+                    </div>
+                    <span class="contact-btn">Escribir</span>
+                </a>
+
+                <a href="https://www.instagram.com/lumier_cosmetologia_depilacion/" target="_blank" rel="noopener noreferrer" class="contact-card instagram">
+                    <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="contact-text">
+                        <span class="contact-label">Instagram</span>
+                        <span class="contact-value">@lumier_cosmetologia</span>
+                    </div>
+                    <span class="contact-btn">Seguir</span>
+                </a>
+
+                <div class="contact-card address">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="contact-text">
+                        <span class="contact-label">Dirección</span>
+                        <span class="contact-value">Andes 1365, esq. Av. 18 de Julio<br>Centro, Montevideo</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- HORARIOS -->
+            <div class="schedule-bar reveal">
+                <div class="schedule-bar-title">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Horarios de atención</span>
+                </div>
+                <div class="schedule-days">
+                    <div class="schedule-day">
+                        <span class="sday-name">Lunes</span>
+                        <span class="sday-hours">9:30 — 19:00</span>
+                    </div>
+                    <div class="schedule-day">
+                        <span class="sday-name">Martes</span>
+                        <span class="sday-hours">9:30 — 19:00</span>
+                    </div>
+                    <div class="schedule-day">
+                        <span class="sday-name">Miércoles</span>
+                        <span class="sday-hours">9:30 — 19:00</span>
+                    </div>
+                    <div class="schedule-day schedule-day--closed">
+                        <span class="sday-name">Jueves</span>
+                        <span class="sday-hours">Cerrado</span>
+                    </div>
+                    <div class="schedule-day">
+                        <span class="sday-name">Viernes</span>
+                        <span class="sday-hours">9:30 — 19:00</span>
+                    </div>
+                    <div class="schedule-day schedule-day--closed">
+                        <span class="sday-name">Sábado</span>
+                        <span class="sday-hours">Cerrado</span>
+                    </div>
+                    <div class="schedule-day schedule-day--closed">
+                        <span class="sday-name">Domingo</span>
+                        <span class="sday-hours">Cerrado</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MAPA -->
+            <div class="map-wrap reveal">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.338!2d-56.1878!3d-34.9061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x13fc47809cdb10e4!2sLumier%20Cosmetologia%20Integral!5e0!3m2!1ses!2suy!4v1710000000000"
+                    width="100%"
+                    height="360"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación de Lumier Cosmetología Integral en Google Maps">
+                </iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="footer">
+        <div class="footer-brand">
+            <img src="img/logo-removebg-preview.png" alt="Lumier Cosmetología Logo" class="footer-logo">
+            <span class="footer-name">Lumier Cosmetología Integral</span>
+            <span class="footer-slogan">Te acompaño a cuidar tu piel de manera consciente.</span>
+        </div>
+        <nav class="footer-nav" aria-label="Navegación del footer">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!-- ======================== WHATSAPP FAB ======================== -->
+    <a href="https://wa.me/59895350595" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
