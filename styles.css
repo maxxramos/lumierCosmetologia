@@ -1063,13 +1063,56 @@ a.contact-card.instagram:hover .contact-btn { background: #C13584; color: #fff; 
 
     .modal {
         border-radius: var(--radius) var(--radius) 0 0;
-        max-height: 85vh;
-        padding: 36px 24px 32px;
+        max-height: 78vh;
+        padding: 20px 20px 28px;
         transform: translateY(100%);
+        display: flex;
+        flex-direction: column;
     }
 
     .modal-overlay.active .modal {
         transform: translateY(0);
+    }
+
+    /* Drag handle visual cue */
+    .modal::before {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 4px;
+        background: rgba(0,0,0,0.12);
+        border-radius: 2px;
+        margin: 0 auto 16px;
+        flex-shrink: 0;
+    }
+
+    .modal-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+        flex-shrink: 0;
+    }
+
+    .modal h3 {
+        font-size: 1.35rem;
+        margin-bottom: 10px;
+        flex-shrink: 0;
+    }
+
+    .modal p {
+        font-size: 0.88rem;
+        line-height: 1.65;
+        margin-bottom: 18px;
+        overflow-y: auto;
+        flex: 1;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .modal .btn-primary {
+        flex-shrink: 0;
+        width: 100%;
+        text-align: center;
     }
 
     /* Carousel buttons hidden on mobile (swipe only) */
@@ -1085,6 +1128,42 @@ a.contact-card.instagram:hover .contact-btn { background: #C13584; color: #fff; 
     .contact-card {
         width: calc(50% - 10px);
         min-width: 140px;
+    }
+
+    /* Schedule bar mobile: lista compacta */
+    .schedule-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        padding: 20px;
+    }
+
+    .schedule-bar-title {
+        justify-content: center;
+    }
+
+    .schedule-days {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .schedule-day {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-width: unset;
+        padding: 9px 14px;
+        border-radius: var(--radius-sm);
+    }
+
+    .sday-name {
+        font-size: 0.82rem;
+        letter-spacing: 0;
+    }
+
+    .sday-hours {
+        font-size: 0.82rem;
     }
 
     /* Footer */
