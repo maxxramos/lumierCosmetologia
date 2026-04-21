@@ -6,10 +6,10 @@
 const serviceData = {
     cosmetologia: {
         icon: '<i class="fa-solid fa-spa"></i>',
-        title: 'Cosmetología Integral',
-        desc: `La cosmetología integral en Lumier es mucho más que un tratamiento estético: es un ritual de autocuidado diseñado específicamente para vos.
+        title: 'Cosmetología Holística',
+        desc: `La cosmetología holística en Lumier es una técnica de acompañamiento pensada para cada persona: sostener su proceso desde la calma, escuchar lo que su piel necesita y darle, poco a poco, ese equilibrio que tanto pide.
 
-Trabajamos con productos de alta calidad y técnicas actualizadas para nutrir, revitalizar y equilibrar tu piel, abordando desde su capa más superficial hasta sus necesidades profundas.
+Trabajamos de forma personalizada, con técnicas actualizadas y productos de calidad que cuidan tu piel de adentro hacia afuera, en un espacio de respeto y bienestar.
 
 <strong>¿Qué incluye?</strong>
 • Higiene facial profunda con extracción y purificación
@@ -17,22 +17,19 @@ Trabajamos con productos de alta calidad y técnicas actualizadas para nutrir, r
 • Tratamientos antiaging y reafirmantes
 • Peeling y renovación celular
 • Máscaras nutritivas y calmantes
-• Masajes faciales con técnica circulatoria y linfática
+• Masajes faciales circulatorios y linfáticos
 
 <strong>¿Para quién es?</strong>
-Para cualquier persona que desee cuidar su piel de manera consciente, tratar imperfecciones o simplemente disfrutar de un momento de bienestar total.
+Para toda persona que desee cuidar su piel de manera consciente, tratando sus imperfecciones o simplemente disfrutando de un momento de bienestar real.
 
-Cada sesión es un espacio único donde priorizamos tu comodidad y los resultados reales y visibles.`
+Cada sesión es un ritual único donde la escucha y los resultados son protagonistas.`
     },
     depilacion: {
         icon: '<i class="fa-solid fa-bolt"></i>',
         title: 'Depilación Láser',
-        desc: `La depilación láser en Lumier es sinónimo de libertad, confianza y tecnología de vanguardia.
+        desc: `La depilación láser en Lumier es un tratamiento personalizado para la eliminación del vello, adaptado a las zonas a tratar y al tipo de piel de cada persona.
 
-Utilizamos equipos de última generación que se adaptan a todos los fototipos de piel, garantizando tratamientos seguros, efectivos y prácticamente indoloros.
-
-<strong>Resultados desde la primera sesión:</strong>
-Nuestras clientas notan una reducción significativa del vello desde el primer tratamiento, con resultados que mejoran progresivamente en cada sesión.
+Utilizamos equipos de última generación que garantizan tratamientos seguros, efectivos y prácticamente indoloros, con resultados visibles desde la primera sesión.
 
 <strong>Zonas disponibles:</strong>
 • Rostro (labio superior, mentón, patillas)
@@ -43,12 +40,12 @@ Nuestras clientas notan una reducción significativa del vello desde el primer t
 • Brazos
 
 <strong>¿Por qué elegirnos?</strong>
-• Equipos certificados con tecnología de alta frecuencia
-• Procedimientos personalizados según tu tipo de piel y vello
-• Ambiente sterile, higiénico y confortable
-• Resultados visibles, duraderos y con cero dolor
+• Tratamiento personalizado según tu tipo de piel y vello
+• Equipos certificados de alta tecnología
+• Ambiente higiénico, prolijo y confortable
+• Resultados reales y duraderos
 
-Decile adiós a la depilación transitoria y bienvenida a tu nueva libertad.`
+Cada sesión se adapta a vos, con la misma dedicación y profesionalismo de siempre.`
     },
     coaching: {
         icon: '<i class="fa-solid fa-heart-pulse"></i>',
@@ -103,6 +100,24 @@ navLinks.querySelectorAll('a').forEach(link => {
         navLinks.classList.remove('open');
     });
 });
+
+/* ======================== HERO VIDEO LOOP (0–10s) ======================== */
+const heroVideo = document.getElementById('heroVideo');
+if (heroVideo) {
+    let looping = false;
+    heroVideo.addEventListener('timeupdate', () => {
+        if (!looping && heroVideo.currentTime >= 9.5) {
+            looping = true;
+            heroVideo.style.opacity = '0';
+            setTimeout(() => {
+                heroVideo.currentTime = 0;
+                heroVideo.play();
+                heroVideo.style.opacity = '1';
+                looping = false;
+            }, 500);
+        }
+    });
+}
 
 /* ======================== NAVBAR ON SCROLL ======================== */
 window.addEventListener('scroll', () => {

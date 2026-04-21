@@ -5,15 +5,15 @@
 /* ======================== VARIABLES ======================== */
 :root {
     --primary:       #D7C7BB;
-    --secondary:     #C98B52;
+    --secondary:     #A09C93;
     --black:         #1a1a1a;
     --dark:          #2c2c2c;
     --text:          #3a3a3a;
     --text-light:    #7a7068;
     --light:         #FAF7F5;
     --white:         #ffffff;
-    --shadow:        0 4px 24px rgba(201,139,82,0.10);
-    --shadow-hover:  0 10px 40px rgba(201,139,82,0.22);
+    --shadow:        0 4px 24px rgba(160,156,147,0.10);
+    --shadow-hover:  0 10px 40px rgba(160,156,147,0.22);
     --radius:        16px;
     --radius-sm:     10px;
     --transition:    0.3s ease;
@@ -125,7 +125,7 @@ ul {
 }
 
 .btn-primary:hover {
-    background: #b57844;
+    background: #7a7670;
     transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
 }
@@ -137,10 +137,10 @@ ul {
     left: 0;
     right: 0;
     height: var(--nav-height);
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(160, 156, 147, 0.97);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(215, 199, 187, 0.4);
+    border-bottom: 1px solid rgba(160, 156, 147, 0.6);
     z-index: 1000;
     transition: box-shadow var(--transition);
 }
@@ -163,6 +163,8 @@ ul {
     height: 48px;
     width: auto;
     object-fit: contain;
+    border-radius: 8px;
+    border: 3px solid rgba(160,156,147,0.97);
 }
 
 .nav-links {
@@ -174,7 +176,7 @@ ul {
 .nav-links a {
     font-size: 0.9rem;
     font-weight: 500;
-    color: var(--text);
+    color: rgba(255,255,255,0.88);
     letter-spacing: 0.04em;
     padding-bottom: 2px;
     border-bottom: 2px solid transparent;
@@ -183,8 +185,8 @@ ul {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: var(--secondary);
-    border-bottom-color: var(--secondary);
+    color: var(--white);
+    border-bottom-color: var(--white);
 }
 
 /* Hamburger */
@@ -216,23 +218,43 @@ ul {
 /* ======================== HERO ======================== */
 .hero {
     min-height: 100vh;
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
     padding: calc(var(--nav-height) + 48px) 5vw 64px;
-    gap: 56px;
-    max-width: 1280px;
-    margin: 0 auto;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(160, 156, 147, 0.60);
+    z-index: 1;
 }
 
 .hero-content {
-    flex: 1 1 50%;
-    max-width: 580px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 760px;
+    width: 100%;
 }
 
 .hero-badge {
     display: inline-block;
-    background: var(--primary);
-    color: var(--dark);
+    background: rgba(255,255,255,0.18);
+    color: var(--white);
     font-size: 0.78rem;
     font-weight: 500;
     letter-spacing: 0.08em;
@@ -240,26 +262,27 @@ ul {
     padding: 7px 18px;
     border-radius: 50px;
     margin-bottom: 24px;
+    border: 1px solid rgba(255,255,255,0.3);
 }
 
 .hero h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(2.6rem, 5.5vw, 4.4rem);
     font-weight: 400;
-    color: var(--black);
+    color: var(--white);
     line-height: 1.15;
     margin-bottom: 20px;
     letter-spacing: -0.01em;
 }
 
 .hero h1 span {
-    color: var(--secondary);
+    color: var(--primary);
     font-style: italic;
 }
 
 .hero-slogan {
     font-size: clamp(1.05rem, 2vw, 1.25rem);
-    color: var(--text-light);
+    color: rgba(255,255,255,0.88);
     font-weight: 300;
     margin-bottom: 36px;
     line-height: 1.6;
@@ -268,27 +291,7 @@ ul {
 .hero-slogan em {
     font-style: normal;
     font-weight: 600;
-    color: var(--secondary);
-}
-
-.hero-image {
-    flex: 1 1 45%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-image img {
-    width: 100%;
-    max-width: 520px;
-    border-radius: 24px;
-    animation: float 5s ease-in-out infinite;
-    filter: drop-shadow(0 20px 48px rgba(201,139,82,0.18));
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50%       { transform: translateY(-14px); }
+    color: var(--primary);
 }
 
 /* ======================== SERVICIOS ======================== */
@@ -458,31 +461,32 @@ ul {
 .about-content {
     display: flex;
     gap: 48px;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 56px;
+    text-align: left;
 }
 
 .about-avatar {
     flex-shrink: 0;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
+    background: #A09C93;
+    border: 3px solid #A09C93;
 }
 
-.avatar-initial {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.6rem;
-    font-weight: 500;
-    color: var(--white);
-    line-height: 1;
+.about-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 12px;
+    display: block;
 }
 
 .about-bio {
-    font-size: 1rem;
+    font-size: 1.08rem;
     color: var(--text);
     line-height: 1.85;
 }
@@ -875,8 +879,8 @@ a.contact-card.instagram:hover .contact-btn { background: #C13584; color: #fff; 
 
 /* ======================== FOOTER ======================== */
 .footer {
-    background: var(--black);
-    color: rgba(255,255,255,0.75);
+    background: #A09C93;
+    color: rgba(255,255,255,0.95);
     padding: 56px 5vw;
     display: flex;
     flex-direction: column;
@@ -894,24 +898,24 @@ a.contact-card.instagram:hover .contact-btn { background: #C13584; color: #fff; 
 }
 
 .footer-logo {
-    height: 44px;
+    height: 68px;
     width: auto;
     object-fit: contain;
-    filter: brightness(0) invert(1);
-    opacity: 0.85;
+    border-radius: 8px;
+    border: 3px solid #A09C93;
 }
 
 .footer-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     font-weight: 500;
-    color: rgba(255,255,255,0.9);
+    color: var(--white);
     letter-spacing: 0.02em;
 }
 
 .footer-slogan {
-    font-size: 0.83rem;
-    color: rgba(255,255,255,0.5);
+    font-size: 0.93rem;
+    color: rgba(255,255,255,0.9);
     line-height: 1.5;
     font-style: italic;
 }
@@ -925,14 +929,14 @@ a.contact-card.instagram:hover .contact-btn { background: #C13584; color: #fff; 
 }
 
 .footer-nav a {
-    font-size: 0.88rem;
-    color: rgba(255,255,255,0.6);
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.9);
     transition: color var(--transition);
     letter-spacing: 0.03em;
 }
 
 .footer-nav a:hover {
-    color: var(--secondary);
+    color: var(--white);
 }
 
 /* ======================== WHATSAPP FAB ======================== */
@@ -973,11 +977,7 @@ a.contact-card.instagram:hover .contact-btn { background: #C13584; color: #fff; 
 /* ---- 960px ---- */
 @media (max-width: 960px) {
     .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: calc(var(--nav-height) + 40px);
-        gap: 40px;
-        min-height: auto;
+        padding-top: calc(var(--nav-height) + 32px);
         padding-bottom: 60px;
     }
 
@@ -987,11 +987,6 @@ a.contact-card.instagram:hover .contact-btn { background: #C13584; color: #fff; 
 
     .hero-badge {
         margin-bottom: 18px;
-    }
-
-    .hero-image img {
-        max-width: 380px;
-        margin: 0 auto;
     }
 
     .about-content {
@@ -1018,7 +1013,7 @@ a.contact-card.instagram:hover .contact-btn { background: #C13584; color: #fff; 
         top: var(--nav-height);
         left: 0;
         right: 0;
-        background: rgba(255,255,255,0.98);
+        background: rgba(160,156,147,0.98);
         backdrop-filter: blur(10px);
         flex-direction: column;
         align-items: center;
@@ -1026,7 +1021,7 @@ a.contact-card.instagram:hover .contact-btn { background: #C13584; color: #fff; 
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.35s ease;
-        border-bottom: 1px solid rgba(215,199,187,0.4);
+        border-bottom: 1px solid rgba(255,255,255,0.2);
     }
 
     .nav-links.open {
@@ -1193,11 +1188,7 @@ a.contact-card.instagram:hover .contact-btn { background: #C13584; color: #fff; 
     }
 
     .about-avatar {
-        width: 80px;
-        height: 80px;
-    }
-
-    .avatar-initial {
-        font-size: 2rem;
+        width: 160px;
+        height: 160px;
     }
 }
