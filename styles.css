@@ -469,8 +469,8 @@ ul {
 
 .about-avatar {
     flex-shrink: 0;
-    width: 200px;
-    height: 200px;
+    width: 270px;
+    height: 270px;
     border-radius: 50%;
     overflow: hidden;
     background: #A09C93;
@@ -481,7 +481,6 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 12px;
     display: block;
 }
 
@@ -1188,7 +1187,7 @@ a.contact-card.instagram:hover .contact-btn { background: #C13584; color: #fff; 
     }
 
     .about-avatar {
-        width: 160px;
-        height: 160px;
+        width: 220px;
+        height: 220px;
     }
 }

@@ -12,12 +12,18 @@ const serviceData = {
 Trabajamos de forma personalizada, con técnicas actualizadas y productos de calidad que cuidan tu piel de adentro hacia afuera, en un espacio de respeto y bienestar.
 
 <strong>¿Qué incluye?</strong>
-• Higiene facial profunda con extracción y purificación
-• Hidratación intensiva con principios activos personalizados
-• Tratamientos antiaging y reafirmantes
-• Peeling y renovación celular
-• Máscaras nutritivas y calmantes
-• Masajes faciales circulatorios y linfáticos
+• Higiene facial
+• Higiene de espalda
+• Ritual de piedra gusha
+• Aparatología
+• Tratamientos reafirmantes
+• Terapia de masaje en rostro
+• Hidratación
+• Peeling
+
+Utilizo técnicas y productos nobles para acompañarte en un camino de armonía, salud y renovación.
+
+La cosmetología holística está creada no solo para el bienestar de la piel sino también para un bienestar emocional.
 
 <strong>¿Para quién es?</strong>
 Para toda persona que desee cuidar su piel de manera consciente, tratando sus imperfecciones o simplemente disfrutando de un momento de bienestar real.
@@ -31,13 +37,7 @@ Cada sesión es un ritual único donde la escucha y los resultados son protagoni
 
 Utilizamos equipos de última generación que garantizan tratamientos seguros, efectivos y prácticamente indoloros, con resultados visibles desde la primera sesión.
 
-<strong>Zonas disponibles:</strong>
-• Rostro (labio superior, mentón, patillas)
-• Axilas
-• Bikini y zona íntima
-• Piernas completas o parciales
-• Espalda y pecho
-• Brazos
+Trabajo todas las áreas según tus necesidades, de forma completamente personalizada.
 
 <strong>¿Por qué elegirnos?</strong>
 • Tratamiento personalizado según tu tipo de piel y vello
